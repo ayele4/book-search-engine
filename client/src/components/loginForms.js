@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
-import { loginUser } from '../utils/API';
+import { LOGIN_USER } from '../utils/API';
 import Auth from '../utils/auth';
 import { useMutation } from '@apollp/client';
 
@@ -19,7 +19,7 @@ const LoginForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    
+
     try {
       const { data } = await login({
         variables: {
